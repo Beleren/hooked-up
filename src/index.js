@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Hook from './hooks/UseCallback'
+// import App from './App';
+import Hook from './hooks/UseState'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Hook />, document.getElementById('root'));
