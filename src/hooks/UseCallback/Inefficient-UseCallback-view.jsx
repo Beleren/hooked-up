@@ -18,7 +18,7 @@ export default function InefficientUseCallbackView() {
       <h3>Without useCallback</h3>
       <p>{count}</p>
       {benNumbers.map((ben) => (
-        <Example ben={ben} onClick={inefficientHandleClick}></Example>
+        <Example ben={ben} onClick={inefficientHandleClick} key={ben}></Example>
       ))}
     </div>
   );

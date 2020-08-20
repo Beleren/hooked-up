@@ -26,12 +26,12 @@ export default function UseMemo() {
       <button onClick={() => setState((state) => state + 1)}>
         Sum parent number
       </button>
-      <Hook number={state} />
+      <UseMemoChild number={state} />
     </div>
   );
 }
 
-function Hook({ number }) {
+function UseMemoChild({ number }) {
   console.log('rendering child component');
   let [result, setResult] = React.useState('Not yet calculated');
 
