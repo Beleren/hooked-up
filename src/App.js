@@ -4,31 +4,38 @@ import logo from './logo.svg';
 import './App.css';
 import UseState from './hooks/UseState';
 import UseCallback from './hooks/UseCallback';
+import UseMemo from './hooks/UseMemo';
 
 function App() {
   return (
     <Router>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
       </header>
       <div style={{ display: 'flex' }}>
-        <nav className="App-nav">
+        <nav className='App-nav'>
           <ul>
             <li>
-              <Link to="/use-state">useState</Link>
+              <Link to='/use-state'>useState</Link>
             </li>
             <li>
-              <Link to="/use-callback">useCallback</Link>
+              <Link to='/use-callback'>useCallback</Link>
+            </li>
+            <li>
+              <Link to='/use-memo'>useMemo</Link>
             </li>
           </ul>
         </nav>
         <div style={{ padding: 15 }}>
           <Switch>
-            <Route path="/use-state">
+            <Route path='/use-state'>
               <UseState />
             </Route>
-            <Route path="/use-callback">
+            <Route path='/use-callback'>
               <UseCallback />
+            </Route>
+            <Route path='/use-memo'>
+              <UseMemo />
             </Route>
           </Switch>
         </div>
