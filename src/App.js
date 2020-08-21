@@ -5,6 +5,7 @@ import './App.css';
 import UseState from './hooks/UseState';
 import UseCallback from './hooks/UseCallback';
 import UseMemo from './hooks/UseMemo';
+import UseRef from './hooks/UseRef';
 
 function App() {
   return (
@@ -24,9 +25,12 @@ function App() {
             <li>
               <Link to='/use-memo'>useMemo</Link>
             </li>
+            <li>
+              <Link to='/use-ref'>useRef</Link>
+            </li>
           </ul>
         </nav>
-        <div style={{ padding: 15 }}>
+        <div style={{ padding: 15, width: '100%' }}>
           <Switch>
             <Route path='/use-state'>
               <UseState />
@@ -36,6 +40,9 @@ function App() {
             </Route>
             <Route path='/use-memo'>
               <UseMemo />
+            </Route>
+            <Route path='/use-ref'>
+              <UseRef />
             </Route>
           </Switch>
         </div>

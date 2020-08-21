@@ -7,3 +7,4 @@ STARTING ONE MORE PROJECT I'M NOT GOING TO FINISH!! WOOHOOO!!
 - [Ben Awad - React Hooks](https://www.youtube.com/watch?v=f687hBjwFcM&t=4945s)
 - [Ohans Emmanuel - solutions to common problems](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/)
 - [Awesome React - Performance](https://github.com/enaqx/awesome-react#react-performance)
+- https://usehooks.com/
