@@ -35,10 +35,19 @@ function UseMemoChild({ number }) {
   console.log('rendering child component');
   let [result, setResult] = React.useState('Not yet calculated');
 
+  // Resetting state from an effect when a prop changes causes a cascading
+  // render. Kept as-is because it is part of what this demo shows; the
+  // idiomatic fix would be deriving `result` or keying the component.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setResult('Not yet calculated');
   }, [number]);
 
+  // An async callback makes useMemo memoize the *promise*, not the resolved
+  // value — which is why `getResult` below has to await it. React's own lint
+  // rule rejects this outright; it is preserved deliberately to demonstrate
+  // the trap.
+  // eslint-disable-next-line react-hooks/use-memo
   const myExpensiveResultObject = useMemo(async () => {
     const result = await SomeLongRunningApi(number);
     return result;
