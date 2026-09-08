@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import UseState from './hooks/UseState';
@@ -31,20 +30,13 @@ function App() {
           </ul>
         </nav>
         <div style={{ padding: 15, width: '100%' }}>
-          <Switch>
-            <Route path='/use-state'>
-              <UseState />
-            </Route>
-            <Route path='/use-callback'>
-              <UseCallback />
-            </Route>
-            <Route path='/use-memo'>
-              <UseMemo />
-            </Route>
-            <Route path='/use-ref'>
-              <UseRef />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path='/' element={<p>Pick a hook from the menu.</p>} />
+            <Route path='/use-state' element={<UseState />} />
+            <Route path='/use-callback' element={<UseCallback />} />
+            <Route path='/use-memo' element={<UseMemo />} />
+            <Route path='/use-ref' element={<UseRef />} />
+          </Routes>
         </div>
       </div>
     </Router>
